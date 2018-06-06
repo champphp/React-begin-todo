@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 class App extends Component {
   state = {
     todos:[
-        {id:1,text:'Go buy shoes',completed:false},
+        {id:1,text:'Go buy shoes',completed:true},
         {id:2,text:'Walk the dog',completed:true},
         {id:3,text:'Walk the cat',completed:false}
 
