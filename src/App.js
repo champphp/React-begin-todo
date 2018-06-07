@@ -38,7 +38,12 @@ class App extends Component {
   };
 
   addTodo = (newtext) =>{
-    const newId1 = this.state.todos[this.state.todos.length-1].id + 1;
+    let newId1 = 0; 
+    if(this.state.counttodo === 0){
+      newId1 = 1;
+    }else{
+      newId1 = this.state.todos[this.state.todos.length-1].id + 1;
+    }
     // const newId = this.state.todos.length+1;
     const currentTodes = this.state.todos;
     
@@ -62,25 +67,25 @@ class App extends Component {
     });
   }
 
-  setcompleted = (id) =>{
-    const currentTodes = this.state.todos;
+  // setcompleted = (id) =>{
+  //   const currentTodes = this.state.todos;
     
-    const newtodo = currentTodes.map((todo)=>{
-      let tododata = todo;
-      if(tododata.id === id){
-        if(tododata.completed){
-          tododata.completed = false;
-        }else{
-          tododata.completed = true;
-        }
-      }
-      return tododata;
-    });
-    this.setState({
-      todos:newtodo
-    });
+  //   const newtodo = currentTodes.map((todo)=>{
+  //     let tododata = todo;
+  //     if(tododata.id === id){
+  //       if(tododata.completed){
+  //         tododata.completed = false;
+  //       }else{
+  //         tododata.completed = true;
+  //       }
+  //     }
+  //     return tododata;
+  //   });
+  //   this.setState({
+  //     todos:newtodo
+  //   });
 
-  };
+  // };
 
   toggleComplete = (id,completed) =>{
     const currentTodes = this.state.todos;

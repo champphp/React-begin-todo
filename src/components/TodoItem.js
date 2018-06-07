@@ -24,17 +24,12 @@ class TodoItem extends Component {
         }
     }
     render(){
-        var newClass = {
-            'completed': this.props.completed,
-            'hideItem': this.checkstatus()
-
-        };
         return (
             <li key={this.props.key} className={[this.props.completed ? 'completed' : '',this.checkstatus() ? 'hideItem' : ''].join(' ')} >
                 <div className="view">
                     <input type="checkbox" 
                         className="toggle" 
-                        checked={this.props.completed} 
+                        defaultChecked={this.props.completed} 
                         onClick={this.tiemcompleted}
                     />
                     <label>{this.props.text}</label>
