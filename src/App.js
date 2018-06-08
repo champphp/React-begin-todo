@@ -24,7 +24,7 @@ class App extends Component {
 
   addTodo = (newtext) =>{
     let newId1 = 0; 
-    if(this.state.counttodo === 0){
+    if(this.state.todos.length === 0){
       newId1 = 1;
     }else{
       newId1 = this.state.todos[this.state.todos.length-1].id + 1;
@@ -45,7 +45,6 @@ class App extends Component {
     const newtodo = currentTodes.filter((todo)=>{
       return todo.id !== id;
     });
-    // this.reducedCount();
     this.setState({
       todos:newtodo
     });
