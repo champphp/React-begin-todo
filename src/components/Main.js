@@ -8,18 +8,6 @@ class Main extends Component{
 
     
     render(){
-        // const liNode1 = [] ;
-        // for(var i = 0;i<this.state.todos.length; i++){
-        //     liNode1.push(
-        //         <li key={this.state.todos[i].id}>
-        //             <div className="view">
-        //                 <input type="checkbox" className="toggle" />
-        //                 <label>{this.state.todos[i].text}</label>
-        //                 <button type="button" className="destroy" />
-        //             </div>
-        //         </li>
-        //     );
-        // };
         const liNodes = this.props.todos.map((todo)=> {
             return (
                 <TodoItem key={todo.id}

@@ -8,7 +8,7 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <span className="todo-count">
-                    <strong>{this.props.count()}</strong> <spen>item left</spen>
+                    <strong>{this.props.count()}</strong> <span>item left</span>
                 </span>
                 <ul className="filters">
                     <li>

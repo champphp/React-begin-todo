@@ -29,7 +29,6 @@ class App extends Component {
     }else{
       newId1 = this.state.todos[this.state.todos.length-1].id + 1;
     }
-    // const newId = this.state.todos.length+1;
     const currentTodes = this.state.todos;
     
     currentTodes.push({id:newId1,text:newtext});
